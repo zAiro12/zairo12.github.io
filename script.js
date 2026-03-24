@@ -136,7 +136,7 @@ function renderProjects(repos) {
   if (!grid) return;
 
   if (!repos || repos.length === 0) {
-    grid.innerHTML = '<p style="color:var(--text-muted)">Impossibile caricare i progetti. <a href="https://github.com/zAiro12" target="_blank" rel="noopener">Visita il profilo GitHub</a>.</p>';
+    grid.innerHTML = '<p style="color:var(--text-muted)">Impossibile caricare i progetti. <a href="https://github.com/zAiro12" target="_blank" rel="noopener noreferrer">Visita il profilo GitHub</a>.</p>';
     return;
   }
 
