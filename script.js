@@ -18,6 +18,11 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+// Also close menu on hashchange (e.g., when clicking logo to navigate to #hero)
+window.addEventListener('hashchange', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', false);
+});
 // =============================
 // Active nav link on scroll
 // =============================
