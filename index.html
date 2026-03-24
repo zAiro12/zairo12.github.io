@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio di Luca Airoldi — Software Developer & Systems Administrator, appassionato di web development, cloud e maker." />
+  <title>Luca Airoldi — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://github.com/zAiro12.png" type="image/png" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" aria-label="Navigazione principale">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">z<span>Airo</span>12</a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Progetti</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <p class="hero-greeting">Ciao, sono</p>
+        <h1 class="hero-name">Luca Airoldi</h1>
+        <p class="hero-role">
+          <strong>Software Developer</strong> &amp; Systems Administrator
+        </p>
+        <p class="hero-desc">
+          Appassionato di web development, automazione cloud e progetti maker.
+          Combino software ed elettronica per creare soluzioni innovative,
+          dai sistemi embedded ai droni.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
+            </svg>
+            Vedi i progetti
+          </a>
+          <a href="#contact" class="btn btn-outline">Contattami</a>
+          <a href="https://github.com/zAiro12" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <img
+          src="https://github.com/zAiro12.png"
+          alt="Avatar di Luca Airoldi"
+          width="200"
+          height="200"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title"><span>#</span> Chi sono</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Sono un <strong>Software Developer</strong> e <strong>Systems Administrator</strong>
+            con un forte interesse per il web development, l'automazione e la gestione infrastrutturale in cloud.
+          </p>
+          <p>
+            Disponibile a collaborare su progetti <strong>Vue.js</strong> e applicazioni cloud,
+            ma anche su sviluppi hardware basati su <strong>Arduino</strong>, <strong>Raspberry Pi</strong>
+            e tecnologie per droni.
+          </p>
+          <p>
+            Sono un maker per passione: realizzo progetti DIY combinando elettronica, coding e
+            radioamatorialità. Mi piace sperimentare con sensori, robotica e volo con droni.
+          </p>
+          <p>
+            Chiedimi di radiofrequenze, SSL, automazioni cloud o confrontiamoci su idee DIY,
+            prototipi e sistemi embedded: avrò sempre una soluzione, uno schematico o un codice pronto.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-icon">☁️</span>
+            <div>
+              <h4>Cloud &amp; DevOps</h4>
+              <p>Azure, deployment, SSL/TLS, automazioni infrastrutturali</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🌐</span>
+            <div>
+              <h4>Web Development</h4>
+              <p>Vue.js, Angular, React, TypeScript, HTML/CSS/JS</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🔧</span>
+            <div>
+              <h4>Hardware &amp; Maker</h4>
+              <p>Arduino, Raspberry Pi, IoT, droni, sistemi embedded</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">📡</span>
+            <div>
+              <h4>Radioamatorialità</h4>
+              <p>Radiofrequenze, reti LoRa, protocolli wireless</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title"><span>#</span> Skills</h2>
+      <div class="section-divider"></div>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M14.85 3L8.47 12.91 5.55 8.93l1.21-.9 1.64 2.25 5.38-7.97L14.85 3zM1.5 10.5L6 5l1.2 1.6L3.5 11.5H1.5v-1zm0-7h4a.5.5 0 010 1h-4a.5.5 0 010-1z"/>
+            </svg>
+            Linguaggi
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06L.47 8.53a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"/>
+            </svg>
+            Framework &amp; Librerie
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">.NET</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">TailwindCSS</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">SASS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M1 3.5A1.5 1.5 0 012.5 2h11A1.5 1.5 0 0115 3.5v9a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 011 12.5v-9zm1.5 0v9h11v-9h-11z"/>
+            </svg>
+            Database
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MariaDB</span>
+            <span class="skill-tag">Supabase</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M10.5 0a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM0 5.5A5.5 5.5 0 015.5 0H6v.543a6.5 6.5 0 00-.083 10.834L6 11.457V12H5.5A5.5 5.5 0 010 6.5v-1z"/>
+            </svg>
+            Cloud &amp; DevOps
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Apache</span>
+            <span class="skill-tag">SSL/TLS</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 1a.75.75 0 01.75.75V6h4.5a.75.75 0 010 1.5h-4.5v4.25a.75.75 0 01-1.5 0V7.5H2.75a.75.75 0 010-1.5h4.5V1.75A.75.75 0 018 1z"/>
+            </svg>
+            Hardware &amp; IoT
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">Home Assistant</span>
+            <span class="skill-tag">Mosquitto / MQTT</span>
+            <span class="skill-tag">Pi-hole</span>
+            <span class="skill-tag">Zigbee</span>
+            <span class="skill-tag">LoRa</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M1.5 1A1.5 1.5 0 000 2.5v3A1.5 1.5 0 001.5 7h13A1.5 1.5 0 0016 5.5v-3A1.5 1.5 0 0014.5 1h-13zM0 9.5A1.5 1.5 0 011.5 8h13A1.5 1.5 0 0116 9.5v3a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 010 12.5v-3zm1.5 2a.5.5 0 000 1h5a.5.5 0 000-1h-5z"/>
+            </svg>
+            Strumenti
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Swagger</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Trello</span>
+            <span class="skill-tag">Notion</span>
+            <span class="skill-tag">ESLint</span>
+            <span class="skill-tag">Plex</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title"><span>#</span> Progetti</h2>
+      <div class="section-divider"></div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Populated by script.js -->
+        <p style="color:var(--text-muted)">Caricamento progetti...</p>
+      </div>
+      <div class="projects-more">
+        <a
+          href="https://github.com/zAiro12?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          Tutti i repository su GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title"><span>#</span> Contatti</h2>
+      <div class="section-divider"></div>
+      <div class="contact-layout">
+        <div class="contact-text">
+          <p>
+            Sono disponibile per collaborazioni su progetti Vue.js, applicazioni cloud,
+            sviluppi hardware o semplicemente per uno scambio di idee su tecnologia e maker.
+          </p>
+          <p>
+            Non esitare a contattarmi via email o attraverso i miei profili social!
+          </p>
+          <a href="mailto:lucaairoldi92@gmail.com" class="contact-email">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5C0 2.784.784 2 1.75 2zM1.5 4.161V12.25c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V4.161L8.06 8.614a.25.25 0 01-.12.036.25.25 0 01-.12-.036L1.5 4.161zm.765-1.661L8 6.978l5.735-4.478H2.265z"/>
+            </svg>
+            lucaairoldi92@gmail.com
+          </a>
+        </div>
+        <div>
+          <p class="socials-title">Trovami su</p>
+          <div class="socials-grid">
+
+            <a href="https://github.com/zAiro12" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              GitHub
+            </a>
+
+            <a href="https://linkedin.com/in/luca-airoldi-9679a6296" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 01.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+              LinkedIn
+            </a>
+
+            <a href="https://instagram.com/luca.airo" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 00-1.417.923A3.927 3.927 0 00.42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 001.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 00-.923-1.417A3.911 3.911 0 0013.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 01-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 01-.92-.598 2.48 2.48 0 01-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 100 1.92.96.96 0 000-1.92zm-4.27 1.122a4.109 4.109 0 100 8.217 4.109 4.109 0 000-8.217zm0 1.441a2.667 2.667 0 110 5.334 2.667 2.667 0 010-5.334z"/>
+              </svg>
+              Instagram
+            </a>
+
+            <a href="https://x.com/zAir0_12" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+              </svg>
+              X / Twitter
+            </a>
+
+            <a href="https://discord.gg/ENCDhKyAs9" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M13.545 2.907a13.227 13.227 0 00-3.257-1.011.05.05 0 00-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 00-3.658 0 8.258 8.258 0 00-.412-.833.051.051 0 00-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 00-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 003.995 2.02.05.05 0 00.056-.019c.308-.42.582-.863.818-1.329a.05.05 0 00-.01-.059.051.051 0 00-.018-.011 8.875 8.875 0 01-1.248-.595.05.05 0 01-.02-.066.051.051 0 01.015-.019c.084-.063.168-.129.248-.195a.05.05 0 01.051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 01.053.007c.08.066.164.132.248.195a.051.051 0 01-.004.085 8.254 8.254 0 01-1.249.594.05.05 0 00-.03.03.052.052 0 00.003.041c.24.465.515.909.817 1.329a.05.05 0 00.056.019 13.235 13.235 0 004.001-2.02.049.049 0 00.021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 00-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+              </svg>
+              Discord
+            </a>
+
+            <a href="https://twitch.tv/zAiro_" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+              </svg>
+              Twitch
+            </a>
+
+            <a href="https://reddit.com/user/zAiro_12" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M6.167 8a.831.831 0 00-.83.83c0 .459.372.84.83.831a.831.831 0 000-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 000-.306.213.213 0 00-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 00-.306 0 .213.213 0 000 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 00-1.66 0z"/>
+                <path d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 101.483-.763.83.83 0 00-.952.18l-1.86-.4a.192.192 0 00-.23.153l-.598 2.808c-1.225.038-2.33.413-3.136.993a1.167 1.167 0 00-1.156 1.98.909.909 0 000 .229c0 1.656 1.93 3 4.31 3 2.38 0 4.31-1.344 4.31-3 0-.076-.007-.153-.02-.229.18-.124.324-.296.41-.49a1.165 1.165 0 00-.9-1.664z"/>
+              </svg>
+              Reddit
+            </a>
+
+            <a href="https://lucaairo.it" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.536 8.586l1.24-.413A1.5 1.5 0 004 6.682V6.5a1.5 1.5 0 011.5-1.5h.5a.5.5 0 010 1H5.5A.5.5 0 005 6.5v.182a.5.5 0 01-.333.471l-1.744.581A6.513 6.513 0 001.5 8a6.49 6.49 0 00.036.586zM8 14.5a6.49 6.49 0 01-3.044-.753l.97-1.939A1.5 1.5 0 007.268 11H8.5a1.5 1.5 0 001.5-1.5v-.5a1.5 1.5 0 00-.47-1.086l-.96-.948A1.5 1.5 0 008.044 6.5H8a.5.5 0 010-1h.044a2.5 2.5 0 011.774.736l.959.947A2.5 2.5 0 0111.5 9v.5a2.5 2.5 0 01-2.5 2.5h-1.25l-1.152 2.303A6.493 6.493 0 008 14.5zm4.5-6.364a1.5 1.5 0 00-.44-1.063l-.96-.948A2.5 2.5 0 009.326 5.5H9a1.5 1.5 0 000 3h.044a.5.5 0 01.354.147l.96.947A.5.5 0 0110.5 9v.5a.5.5 0 01-.5.5H8.268a.5.5 0 00-.447.277l-.888 1.776A5.5 5.5 0 0012.5 8.136z"/>
+              </svg>
+              lucaairo.it
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      © <span id="year"></span> Luca Airoldi —
+      <a href="https://github.com/zAiro12/zairo.github.io" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
