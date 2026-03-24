@@ -36,6 +36,13 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) {
       return;
     }
+  // Determine the single "best" (most visible / closest to top) intersecting section
+  let bestEntry = null;
+
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    }
 
     if (!bestEntry) {
       bestEntry = entry;
@@ -49,6 +56,25 @@ const observer = new IntersectionObserver((entries) => {
       bestEntry = entry;
     }
   });
+
+  if (!bestEntry) {
+    return;
+  }
+
+  const id = bestEntry.target.getAttribute('id');
+  const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+  if (!link) {
+    return;
+  }
+
+  const allLinks = document.querySelectorAll('.nav-links a');
+  allLinks.forEach(a => {
+    a.classList.remove('active');
+    a.removeAttribute('aria-current');
+  });
+
+  link.classList.add('active');
+  link.setAttribute('aria-current', 'page');
 
   if (!bestEntry) {
     return;
