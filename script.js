@@ -29,19 +29,45 @@ window.addEventListener('hashchange', () => {
 const sections = document.querySelectorAll('section[id]');
 
 const observer = new IntersectionObserver((entries) => {
+  // Determine the single "best" (most visible / closest to top) intersecting section
+  let bestEntry = null;
+
   entries.forEach(entry => {
-    const id = entry.target.getAttribute('id');
-    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-    if (!link) return;
-    if (entry.isIntersecting) {
-      document.querySelectorAll('.nav-links a').forEach(a => {
-        a.classList.remove('active');
-        a.removeAttribute('aria-current');
-      });
-      link.classList.add('active');
-      link.setAttribute('aria-current', 'page');
+    if (!entry.isIntersecting) {
+      return;
+    }
+
+    if (!bestEntry) {
+      bestEntry = entry;
+      return;
+    }
+
+    if (entry.intersectionRatio > bestEntry.intersectionRatio) {
+      bestEntry = entry;
+    } else if (entry.intersectionRatio === bestEntry.intersectionRatio &&
+               entry.boundingClientRect.top < bestEntry.boundingClientRect.top) {
+      bestEntry = entry;
     }
   });
+
+  if (!bestEntry) {
+    return;
+  }
+
+  const id = bestEntry.target.getAttribute('id');
+  const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+  if (!link) {
+    return;
+  }
+
+  const allLinks = document.querySelectorAll('.nav-links a');
+  allLinks.forEach(a => {
+    a.classList.remove('active');
+    a.removeAttribute('aria-current');
+  });
+
+  link.classList.add('active');
+  link.setAttribute('aria-current', 'page');
 }, { threshold: 0.4 });
 
 sections.forEach(s => observer.observe(s));
