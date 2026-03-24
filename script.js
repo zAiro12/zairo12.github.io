@@ -148,14 +148,37 @@ function renderProjects(repos) {
 }
 
 async function loadProjects() {
+  const CACHE_KEY = 'gh_repos_cache';
+  const CACHE_TTL = 60 * 60 * 1000; // 1 hour in ms
+
+  try {
+    const cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+      const { ts, data } = JSON.parse(cached);
+      if (Date.now() - ts < CACHE_TTL) {
+        renderProjects(data);
+        return;
+      }
+    }
+  } catch {
+    // Ignore localStorage errors (private browsing, quota, etc.)
+  }
+
   try {
     const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const filtered = data
+    const raw = await res.json();
+    const filtered = raw
       .filter(r => !r.fork && !EXCLUDED_REPOS.includes(r.name))
       .sort((a, b) => (b.stargazers_count + b.forks_count) - (a.stargazers_count + a.forks_count))
       .slice(0, 9);
+
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: filtered }));
+    } catch {
+      // Ignore if localStorage is unavailable or full
+    }
+
     renderProjects(filtered);
   } catch {
     renderProjects(null);
