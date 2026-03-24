@@ -27,20 +27,6 @@ window.addEventListener('hashchange', () => {
 // Active nav link on scroll
 // =============================
 const sections = document.querySelectorAll('section[id]');
-
-const observer = new IntersectionObserver((entries) => {
-  // Determine the single "best" (most visible / closest to top) intersecting section
-  let bestEntry = null;
-
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    }
-  // Determine the single "best" (most visible / closest to top) intersecting section
-  let bestEntry = null;
-
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
 const navLinkElements = document.querySelectorAll('.nav-links a');
 let currentActiveLink = null;
 
@@ -49,10 +35,8 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) return;
 
     const id = entry.target.getAttribute('id');
-    const targetHref = `#${id}`;
-
     const link = Array.from(navLinkElements).find(
-      (a) => a.getAttribute('href') === targetHref
+      (a) => a.getAttribute('href') === `#${id}`
     );
 
     if (!link || link === currentActiveLink) return;
@@ -66,44 +50,6 @@ const observer = new IntersectionObserver((entries) => {
     link.setAttribute('aria-current', 'page');
     currentActiveLink = link;
   });
-
-  if (!bestEntry) {
-    return;
-  }
-
-  const id = bestEntry.target.getAttribute('id');
-  const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-  if (!link) {
-    return;
-  }
-
-  const allLinks = document.querySelectorAll('.nav-links a');
-  allLinks.forEach(a => {
-    a.classList.remove('active');
-    a.removeAttribute('aria-current');
-  });
-
-  link.classList.add('active');
-  link.setAttribute('aria-current', 'page');
-
-  if (!bestEntry) {
-    return;
-  }
-
-  const id = bestEntry.target.getAttribute('id');
-  const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-  if (!link) {
-    return;
-  }
-
-  const allLinks = document.querySelectorAll('.nav-links a');
-  allLinks.forEach(a => {
-    a.classList.remove('active');
-    a.removeAttribute('aria-current');
-  });
-
-  link.classList.add('active');
-  link.setAttribute('aria-current', 'page');
 }, { threshold: 0.4 });
 
 sections.forEach(s => observer.observe(s));

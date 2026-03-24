@@ -151,23 +151,6 @@ img {
   background: var(--accent);
   border-radius: 999px;
 }
-.nav-links a.active,
-.nav-links a:focus-visible {
-  color: var(--accent);
-  position: relative;
-}
-
-.nav-links a.active::after,
-.nav-links a:focus-visible::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 999px;
-}
 .nav-toggle {
   display: none;
   background: none;
