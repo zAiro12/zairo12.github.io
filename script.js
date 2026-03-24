@@ -41,20 +41,30 @@ const observer = new IntersectionObserver((entries) => {
 
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      return;
+const navLinkElements = document.querySelectorAll('.nav-links a');
+let currentActiveLink = null;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const id = entry.target.getAttribute('id');
+    const targetHref = `#${id}`;
+
+    const link = Array.from(navLinkElements).find(
+      (a) => a.getAttribute('href') === targetHref
+    );
+
+    if (!link || link === currentActiveLink) return;
+
+    if (currentActiveLink) {
+      currentActiveLink.classList.remove('active');
+      currentActiveLink.removeAttribute('aria-current');
     }
 
-    if (!bestEntry) {
-      bestEntry = entry;
-      return;
-    }
-
-    if (entry.intersectionRatio > bestEntry.intersectionRatio) {
-      bestEntry = entry;
-    } else if (entry.intersectionRatio === bestEntry.intersectionRatio &&
-               entry.boundingClientRect.top < bestEntry.boundingClientRect.top) {
-      bestEntry = entry;
-    }
+    link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
+    currentActiveLink = link;
   });
 
   if (!bestEntry) {
