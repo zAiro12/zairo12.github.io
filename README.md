@@ -2,7 +2,7 @@
 
 Portfolio personale di **Luca Airoldi** — Software Developer & Systems Administrator.
 
-[![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-blue?logo=github)](https://zairo12.github.io)
+[![Deploy to GitHub Pages](https://github.com/zAiro12/zairo12.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/zAiro12/zairo12.github.io/actions/workflows/pages/pages-build-deployment)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
@@ -34,6 +34,7 @@ zairo12.github.io/
 ├── index.html   # Struttura e contenuto della pagina
 ├── style.css    # Stili (dark theme, responsive, CSS custom properties)
 ├── script.js    # Logica client: toggle nav, scroll spy, fetch GitHub API
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
