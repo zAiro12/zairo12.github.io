@@ -83,13 +83,31 @@ function renderProjects(repos) {
     return;
   }
 
+  function getSafeRepoUrl(repo) {
+    const rawUrl = repo && repo.html_url;
+    if (!rawUrl) {
+      return '#';
+    }
+
+    try {
+      const parsed = new URL(rawUrl);
+      if (parsed.protocol === 'https:' && parsed.hostname === 'github.com') {
+        return escapeHtml(parsed.toString());
+      }
+    } catch (e) {
+      // Ignore invalid URLs and fall back to a safe default below.
+    }
+
+    return '#';
+  }
+
   grid.innerHTML = repos.map(repo => {
     const lang = escapeHtml(repo.language || '');
     const desc = escapeHtml(repo.description || 'Nessuna descrizione disponibile.');
     const name = escapeHtml(repo.name || '');
     const stars = repo.stargazers_count || 0;
     const forks = repo.forks_count || 0;
-    const url = escapeHtml(repo.html_url || '#');
+    const url = getSafeRepoUrl(repo);
 
     return `
       <a class="project-card" href="${url}" target="_blank" rel="noopener noreferrer">
