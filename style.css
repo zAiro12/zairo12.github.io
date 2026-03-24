@@ -503,17 +503,6 @@ section {
   flex-shrink: 0;
 }
 
-.lang-go { background: #00ADD8; }
-.lang-html { background: #E34F26; }
-.lang-vue { background: #41B883; }
-.lang-javascript { background: #F7DF1E; }
-.lang-typescript { background: #3178C6; }
-.lang-java { background: #ED8B00; }
-.lang-python { background: #3776AB; }
-.lang-cpp { background: #F34B7D; }
-.lang-csharp { background: #239120; }
-.lang-default { background: var(--text-subtle); }
-
 .projects-more {
   text-align: center;
   margin-top: 2rem;
