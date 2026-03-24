@@ -29,8 +29,12 @@ const observer = new IntersectionObserver((entries) => {
     const link = document.querySelector(`.nav-links a[href="#${id}"]`);
     if (!link) return;
     if (entry.isIntersecting) {
-      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.remove('active');
+        a.removeAttribute('aria-current');
+      });
       link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     }
   });
 }, { threshold: 0.4 });
